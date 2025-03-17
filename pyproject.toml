@@ -3,7 +3,7 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "pokemon-battle" 
+name = "pypokemon" 
 version = "0.1.0"
 description = "A turn-based Pokémon battle game with ASCII art."
 authors = [{ name="Your Name", email="your.email@example.com" }]
@@ -21,4 +21,4 @@ dev = ["pytest"]
 "Bug Tracker" = "https://github.com/software-students-spring2025/3-python-package-ez-squad-3-0/issues"
 
 [project.scripts]
-pokemon-battle = "pokemon_battle.main:main" 
+pypokemon = "pypokemon.__main__:main" 
