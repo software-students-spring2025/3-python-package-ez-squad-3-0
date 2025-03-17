@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pokemon-battle" 
+version = "0.1.0"
+description = "A turn-based Pokémon battle game with ASCII art."
+authors = [{ name="Your Name", email="your.email@example.com" }]
+license = { file = "LICENSE" }
+readme = "README.md"
+keywords = ["pokemon", "game", "battle", "ascii"]
+requires-python = ">=3.7"
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.urls]
+"Homepage" = "https://github.com/software-students-spring2025/3-python-package-ez-squad-3-0"
+"Repository" = "https://github.com/software-students-spring2025/3-python-package-ez-squad-3-0.git"
+"Bug Tracker" = "https://github.com/software-students-spring2025/3-python-package-ez-squad-3-0/issues"
+
+[project.scripts]
+pokemon-battle = "pokemon_battle.main:main" 
