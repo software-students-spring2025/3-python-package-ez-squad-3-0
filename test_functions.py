@@ -34,10 +34,8 @@ def test_select_two_correct_one_wrong_input():
         assert p2 == "Charizard"
     
 def test_select_duplicate_input():
-    # with patch("builtins.input", side_effect=["pikachu", "pikachu", "bulbasaur"]):
-    #     p1, p2 = select_pokemon()
-    #     assert p1 == "Pikachu"
-    #     assert p2 == "Bulbasaur"
-
-def test_show_pokemon():
-    
+    # by design, users can select duplicate pokemons
+    with patch("builtins.input", side_effect=["blastoise", "pikachu", "blastoise"]):
+        p1, p2 = select_pokemon()
+        assert p1 == "Blastoise"
+        assert p2 == "Blastoise"
