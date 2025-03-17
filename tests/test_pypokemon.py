@@ -1,7 +1,7 @@
 
 import pytest
-from pypokemon.import luckypokemon
-from pypokemon.import calculate_damage
+from pypokemon import luckypokemon
+from pypokemon import calculate_damage
 from pypokemon import battle
 from pypokemon import show_pokemon, pokemon_ascii
 
