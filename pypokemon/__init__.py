@@ -4,6 +4,9 @@ from .pokemon import (
     calculate_damage,
     battle,
     luckypokemon,
+    pokemon_data,
+    pokemon_ascii,
+    effectiveness,  
 )
 
 __all__ = [
@@ -12,4 +15,7 @@ __all__ = [
     "calculate_damage",
     "battle",
     "luckypokemon",
+    "pokemon_data",
+    "pokemon_ascii",
+    "effectiveness",
 ]
