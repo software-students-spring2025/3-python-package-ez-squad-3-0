@@ -1,4 +1,3 @@
-
 import random
 import time
 
@@ -157,33 +156,41 @@ def select_pokemon():
 
 # 3 Function: Battle System with Randomized Attack & Defense
 def battle(player_pokemon, opponent_pokemon):
-    """Turn-based battle with random attack and defense values."""
+    """Turn-based battle with labeled Pokémon names to distinguish duplicates."""
+    # Label if Pokémon names are the same
+    if player_pokemon == opponent_pokemon:
+        player_label = f"{player_pokemon} 1"
+        opponent_label = f"{opponent_pokemon} 2"
+    else:
+        player_label = player_pokemon
+        opponent_label = opponent_pokemon
+
     player_hp = pokemon_data[player_pokemon]["HP"]
     opponent_hp = pokemon_data[opponent_pokemon]["HP"]
 
     print("\n🔥 Battle Start! 🔥\n")
-    print(f"{player_pokemon} enters the battlefield!")
-    print(pokemon_ascii[player_pokemon])  # Show player Pokémon
-    print(f"{opponent_pokemon} appears as the opponent!")
-    print(pokemon_ascii[opponent_pokemon])  # Show opponent Pokémon
+    print(f"{player_label} enters the battlefield!")
+    print(pokemon_ascii[player_pokemon])  # Show ASCII art
+    print(f"{opponent_label} appears as the opponent!")
+    print(pokemon_ascii[opponent_pokemon])  # Show ASCII art
 
     while player_hp > 0 and opponent_hp > 0:
-        # Player attacks with random attack value
+        # Player 1 attacks
         damage = calculate_damage(player_pokemon, opponent_pokemon)
         opponent_hp -= damage
-        print(f"\n{player_pokemon} attacks {opponent_pokemon} for {damage} damage! {opponent_pokemon} HP: {max(0, opponent_hp)}")
+        print(f"\n{player_label} attacks {opponent_label} for {damage} damage! {opponent_label} HP: {max(0, opponent_hp)}")
 
         if opponent_hp <= 0:
-            print(f"\n🎉 {opponent_pokemon} fainted! {player_pokemon} wins!")
+            print(f"\n🎉 {opponent_label} fainted! {player_label} wins!")
             return
 
-        # Opponent attacks with random attack value
+        # Player 2 attacks
         damage = calculate_damage(opponent_pokemon, player_pokemon)
         player_hp -= damage
-        print(f"\n{opponent_pokemon} attacks {player_pokemon} for {damage} damage! {player_pokemon} HP: {max(0, player_hp)}")
+        print(f"\n{opponent_label} attacks {player_label} for {damage} damage! {player_label} HP: {max(0, player_hp)}")
 
         if player_hp <= 0:
-            print(f"\n💀 {player_pokemon} fainted! {opponent_pokemon} wins!")
+            print(f"\n💀 {player_label} fainted! {opponent_label} wins!")
             return
 
 # 4 Function: Calculate Randomized Damage
@@ -220,33 +227,3 @@ def luckypokemon():
     lucky_pokemon = random.choice(pokemon_list)
     
     return f"✨ Today your lucky Pokémon is... {lucky_pokemon}! ✨"
-
-# Main Game Loop
-def main():
-    print("\n🌟 Welcome to the Pokémon Battle Game! 🌟")
-
-    while True:
-        print("\n🎮 Main Menu:")
-        print("1️⃣ Show Pokémon")
-        print("2️⃣ Select Pokémon and Battle")
-        print("3️⃣ Get Your Lucky Pokémon")
-        print("4️⃣ Quit")
-
-        choice = input("\nSelect an option: ").strip()
-
-        if choice == "1":
-            show_pokemon()
-        elif choice == "2":
-            p1, p2 = select_pokemon()
-            battle(p1, p2)
-        elif choice == "3":
-            print(luckypokemon())
-        elif choice == "4":
-            print("\nGoodbye! 👋")
-            break
-        else:
-            print("Invalid choice. Please try again.")
-
-# Run the game
-if __name__ == "__main__":
-    main()
