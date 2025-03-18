@@ -3,7 +3,7 @@ import pytest
 from pypokemon import luckypokemon
 from pypokemon import calculate_damage
 from pypokemon import battle
-from pypokemon import show_pokemon
+from pypokemon import show_pokemon, pokemon_ascii
 from pypokemon import select_pokemon
 from unittest.mock import patch
 
