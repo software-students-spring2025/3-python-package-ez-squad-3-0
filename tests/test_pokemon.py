@@ -1,9 +1,9 @@
 
 import pytest
 from pypokemon import luckypokemon
-from pypokemon import calculate_damage
+from pypokemon import calculate_damage, effectiveness
 from pypokemon import battle
-from pypokemon import show_pokemon, pokemon_ascii
+from pypokemon import show_pokemon, pokemon_ascii, pokemon_data
 from pypokemon import select_pokemon
 from unittest.mock import patch
 
