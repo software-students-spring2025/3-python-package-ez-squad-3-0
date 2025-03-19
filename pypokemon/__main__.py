@@ -1,5 +1,4 @@
-from pypokemon import show_pokemon, select_pokemon, battle, luckypokemon, 
-pokemon_data, effectiveness, pokemon_ascii,
+from . import show_pokemon, select_pokemon, battle, luckypokemon, pokemon_data, effectiveness, pokemon_ascii
 
 # Main Game Loop
 def main():
