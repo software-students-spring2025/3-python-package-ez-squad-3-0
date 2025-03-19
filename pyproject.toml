@@ -3,14 +3,24 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "pypokemon" 
+name = "pypokemon"
 version = "0.1.0"
 description = "A turn-based Pokémon battle game with ASCII art."
-authors = [{ name="Your Name", email="your.email@example.com" }]
+authors = [
+    { name = "Chen Jun Hsu", email = "ch4356@nyu.edu" },
+    { name = "Kenny Pan", email = "zp2165@nyu.edu" },
+    { name = "Shenrui Xue", email = "sx2218@nyu.edu" },
+    { name = "Eric Zhao", email = "zz4040@nyu.edu" }
+]
 license = { file = "LICENSE" }
 readme = "README.md"
 keywords = ["pokemon", "game", "battle", "ascii"]
 requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
 
 [project.optional-dependencies]
 dev = ["pytest"]
@@ -21,4 +31,4 @@ dev = ["pytest"]
 "Bug Tracker" = "https://github.com/software-students-spring2025/3-python-package-ez-squad-3-0/issues"
 
 [project.scripts]
-pypokemon = "pypokemon.__main__:main" 
+pypokemon = "pypokemon.__main__:main"
