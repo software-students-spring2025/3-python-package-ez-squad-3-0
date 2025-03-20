@@ -110,6 +110,7 @@ This project is designed to run on **any operating system** (Windows, macOS, Lin
 
 1. **Install pypokemon:**
 ```bash
+pipenv shell #Linux user
 pip install pypokemon
 ```
 
@@ -119,7 +120,6 @@ pypokemon
 # or
 python -m pypokemon
 ```
----
 
 ##  Environment Variables & Starter Data
 This project does not require any environment variables or a database.
