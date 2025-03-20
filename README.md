@@ -6,7 +6,7 @@
 
 ## Project Description
 
-**pypokemon** is a terminal-based ** Pokémon battle game** featuring ASCII art, interactive gameplay, and a fun "Lucky Pokémon" feature. Players can select Pokémon and engage in simulated battles with simple commands.
+**pypokemon** is a terminal-based **Pokémon battle game** featuring ASCII art, interactive gameplay, and a fun "Lucky Pokémon" feature. Players can select Pokémon and engage in simulated battles with simple commands.
 
 ---
 
