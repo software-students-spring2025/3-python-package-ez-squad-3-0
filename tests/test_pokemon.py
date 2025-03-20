@@ -129,5 +129,5 @@ def test_select_duplicate_input():
     # by design, users can select duplicate pokemons
     with patch("builtins.input", side_effect=["blastoise", "pikachu", "blastoise"]):
         p1, p2 = select_pokemon()
-        assert p1 == "Blastoise"
-        assert p2 == "Blastoise"
+        assert p1 == "Blastoise (1)"
+        assert p2 == "Blastoise (2)"

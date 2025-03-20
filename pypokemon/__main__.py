@@ -2,14 +2,14 @@ from . import show_pokemon, select_pokemon, battle, luckypokemon, pokemon_data, 
 
 # Main Game Loop
 def main():
-    print("\n🌟 Welcome to the Pokémon Battle Game! 🌟")
+    print("\n Welcome to the Pokemon Battle Game! ")
 
     while True:
-        print("\n🎮 Main Menu:")
-        print("1️⃣ Show Pokémon")
-        print("2️⃣ Select Pokémon and Battle")
-        print("3️⃣ Get Your Lucky Pokémon")
-        print("4️⃣ Quit")
+        print("\n Main Menu:")
+        print("1. Show Pokemon")
+        print("2. Select Pokemon and Battle")
+        print("3. Get Your Lucky Pokemon")
+        print("4. Quit")
 
         choice = input("\nSelect an option: ").strip()
 
@@ -21,7 +21,7 @@ def main():
         elif choice == "3":
             print(luckypokemon())
         elif choice == "4":
-            print("\nGoodbye! 👋")
+            print("\nGoodbye! ")
             break
         else:
             print("Invalid choice. Please try again.")
