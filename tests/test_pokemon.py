@@ -74,12 +74,28 @@ def test_calculate_damage_positive_value():
     damage = calculate_damage("Venusaur", "Charizard")
     assert damage >= 1, "Damage should be at least 1."
 
+
 def test_calculate_damage_effectiveness():
-    """Test if type effectiveness affects damage output."""
-    damage_fire_vs_grass = calculate_damage("Charizard", "Venusaur")  # Fire vs Grass (should be strong)
-    damage_fire_vs_water = calculate_damage("Charizard", "Blastoise")  # Fire vs Water (should be weak)
-    
-    assert damage_fire_vs_grass >= damage_fire_vs_water, "Fire vs Grass should deal more damage than Fire vs Water."
+    """Test type effectiveness by controlling randomness."""
+    # Save original effectiveness
+    original_effectiveness = effectiveness.copy()
+
+    # Mock random.randint to always return fixed attack and defense values
+    with patch("random.randint", side_effect=[25, 15]):  # Attack=25, Defense=15
+        damage_with_effectiveness = calculate_damage("Charizard", "Venusaur")
+
+    # Disable effectiveness
+    effectiveness.clear()
+
+    with patch("random.randint", side_effect=[25, 15]):  # Same values to ensure fairness
+        damage_without_effectiveness = calculate_damage("Charizard", "Venusaur")
+
+    # Restore effectiveness
+    effectiveness.update(original_effectiveness)
+
+    assert damage_with_effectiveness > damage_without_effectiveness, \
+        "Damage with type effectiveness should be greater than without it."
+
 
 
 def test_luckypokemon():
