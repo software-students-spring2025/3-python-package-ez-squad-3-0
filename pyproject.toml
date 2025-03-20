@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pypokemon"
-version = "0.1.2"
+version = "0.1.4"
 description = "A turn-based Pokémon battle game with ASCII art."
 authors = [
     { name = "Chen Jun Hsu", email = "ch4356@nyu.edu" },
