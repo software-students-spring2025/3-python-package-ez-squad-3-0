@@ -69,28 +69,28 @@ cd 3-python-package-ez-squad-3-0
 ```
 2. **Set Up a Virtual Environment:**
 ```bash
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
+pipenv shell
 ```
-
 
 3. **Install Dependencies:**
 ```bash
 pip install -e .[dev]
 ```
 
-
 4. **Run Tests:**
 ```bash
 pytest
 ```
 
+5. **Install Build Tools:**
+```bash
+pip install build twine
+```
 
-5. **Build Package:**
+6. **Build Package:**
 ```bash
 python -m build
 ```
-
 
 ---
 ##  Team Members
@@ -115,22 +115,18 @@ cd 3-python-package-ez-squad-3-0
 ```
 2. **Set Up a Virtual Environment:**
 ```bash
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
+pipenv shell
 ```
-
 
 3. **Install Dependencies:**
 ```bash
 pip install -e .[dev]
 ```
 
-
 4. **Run the Game:**
 ```bash
 pypokemon
 ```
-
 
 5. **Alternative Run Option:**
 ```bash
