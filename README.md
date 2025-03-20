@@ -104,32 +104,19 @@ python -m build
 
 ---
 
-##  Setup Instructions for Any Platform
+##  Setup Instructions for Any User Any Platform
 
 This project is designed to run on **any operating system** (Windows, macOS, Linux) with **Python 3.7+**. Follow these exact steps to configure and run `pypokemon`:
 
-1. **Clone this repository:**
+1. **Install pypokemon:**
 ```bash
-git clone https://github.com/software-students-spring2025/3-python-package-ez-squad-3-0.git
-cd 3-python-package-ez-squad-3-0
-```
-2. **Set Up a Virtual Environment:**
-```bash
-pipenv shell
+pip install pypokemon
 ```
 
-3. **Install Dependencies:**
-```bash
-pip install -e .[dev]
-```
-
-4. **Run the Game:**
+2. **Run the Game:**
 ```bash
 pypokemon
-```
-
-5. **Alternative Run Option:**
-```bash
+# or
 python -m pypokemon
 ```
 ---
